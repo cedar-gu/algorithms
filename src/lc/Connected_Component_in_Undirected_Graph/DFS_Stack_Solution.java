@@ -46,6 +46,8 @@ public class DFS_Stack_Solution {
             }
 
             cc.add(curr.label);
+            // mark visited after dequeue not enqueue
+            // since nodes are not visited in the same order as they are put into the stack!!!
             visited.add(curr);
 
             for (UndirectedGraphNode neighbor : curr.neighbors) {
